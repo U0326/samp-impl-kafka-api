@@ -33,7 +33,7 @@ public class ConsumerExample {
                     String value = record.value();
                     System.out.println(String.format("thread_name: %s, message_key: %s, message_value:%s",
                             Thread.currentThread().getName(), key, value));
-                    TimeUnit.SECONDS.sleep(++sleepSec % 5);
+                    TimeUnit.SECONDS.sleep(++sleepSec);
                     consumer.commitSync();
                 }
             }

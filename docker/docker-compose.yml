@@ -6,6 +6,7 @@ services:
       - "2181"
   kafka:
     image: wurstmeister/kafka
+    container_name: kafka
     ports:
       - "9092:9092"
     expose:
